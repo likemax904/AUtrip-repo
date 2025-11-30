@@ -1,0 +1,171 @@
+{%extends 'layout.html'%} {%block content %}
+
+<div class="hero min-h-screen flex flex-col">
+  <div class="hero-overlay"></div>
+  <div
+    class="hero-content text-neutral-content text-center flex justify-center"
+  >
+    <div class="w-full h-full px-4">
+      <h1 class="mb-5 text-5xl font-bold">2026 年澳洲行程</h1>
+
+      <!--  新增：倒數計時英雄區塊 -->
+      <div
+        class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-xl p-8 mb-8 text-center text-white transform hover:scale-[1.005] transition-transform duration-500 relative overflow-hidden"
+      >
+        <!-- 裝飾背景 -->
+        <div
+          class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+        >
+          <svg
+            class="absolute -right-10 -bottom-20 w-64 h-64 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+            />
+          </svg>
+        </div>
+
+        <h2
+          class="text-xl md:text-2xl font-medium mb-6 tracking-widest opacity-90"
+        >
+          距離澳洲旅行啟程還有
+        </h2>
+
+        <div
+          id="countdown-timer"
+          class="flex justify-center items-baseline space-x-4 md:space-x-12 relative z-10"
+        >
+          <!-- Days -->
+          <div class="flex flex-col items-center">
+            <span
+              id="cd-days"
+              class="text-5xl md:text-8xl font-black countdown-num leading-none drop-shadow-md"
+              >00</span
+            >
+            <span
+              class="text-sm md:text-lg mt-2 font-medium opacity-80 uppercase tracking-widest"
+              >Days</span
+            >
+          </div>
+          <!-- Separator -->
+          <span
+            class="text-4xl md:text-6xl font-light opacity-40 self-center pb-8"
+            >:</span
+          >
+          <!-- Hours -->
+          <div class="flex flex-col items-center">
+            <span
+              id="cd-hours"
+              class="text-4xl md:text-6xl font-bold countdown-num leading-none opacity-95"
+              >00</span
+            >
+            <span
+              class="text-xs md:text-sm mt-2 font-medium opacity-80 uppercase tracking-widest"
+              >Hours</span
+            >
+          </div>
+          <!-- Separator -->
+          <span
+            class="text-4xl md:text-6xl font-light opacity-40 self-center pb-8"
+            >:</span
+          >
+          <!-- Minutes -->
+          <div class="flex flex-col items-center">
+            <span
+              id="cd-minutes"
+              class="text-4xl md:text-6xl font-bold countdown-num leading-none opacity-95"
+              >00</span
+            >
+            <span
+              class="text-xs md:text-sm mt-2 font-medium opacity-80 uppercase tracking-widest"
+              >Mins</span
+            >
+          </div>
+          <!-- Separator -->
+          <span
+            class="text-4xl md:text-6xl font-light opacity-40 self-center pb-8"
+            >:</span
+          >
+          <!-- Seconds -->
+          <div class="flex flex-col items-center">
+            <span
+              id="cd-seconds"
+              class="text-4xl md:text-6xl font-bold countdown-num leading-none text-secondary-yellow drop-shadow-sm"
+              >00</span
+            >
+            <span
+              class="text-xs md:text-sm mt-2 font-medium opacity-80 uppercase tracking-widest text-secondary-yellow"
+              >Secs</span
+            >
+          </div>
+        </div>
+
+        <!-- 資訊卡片區塊 (日期 & 匯率) -->
+        <div class="mt-8 flex flex-col items-center gap-2 relative z-10">
+          <!-- 目標日期 (設定 w-80 固定寬度) -->
+          <div
+            class="w-80 flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
+          >
+            📅 目標日期: <span id="target-date-display">2026-01-28</span>
+          </div>
+
+          <!-- 當前匯率 (設定 w-80 固定寬度，與上方一致) -->
+          <div
+            class="w-80 flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
+          >
+            <span class="text-base">💰</span>
+            當前匯率 (AUD):
+            <span id="exchange-rate-display">{{data["AUDTWD"]}}</span>
+          </div>
+
+          <!-- API 來源備註 -->
+          <a
+            href="https://tw.rter.info/howto_currencyapi.php"
+            target="_blank"
+            class="text-xs text-white/50 hover:text-white/80 transition-colors mt-1"
+          >
+            全球即時匯率API(https://tw.rter.info/howto_currencyapi.php)
+          </a>
+        </div>
+      </div>
+      <!-- 新增：墨爾本天氣預報區塊 -->
+      <div
+        class="my-8 pt-6 pb-4 border-t border-red/20 bg-gradient-to-r from-gray-300 to-indigo-500 rounded-2xl shadow-xl"
+      >
+        <h3
+          class="text-lg font-bold mb-4 flex items-center justify-center gap-2"
+        >
+          ☁️ 墨爾本天氣預報 (未來 5 天)
+        </h3>
+
+        <!-- 天氣載入中狀態 -->
+        <div id="weather-loading" class="text-sm opacity-80">
+          正在連線氣象衛星...
+        </div>
+
+        <!-- 天氣卡片容器 (預設隱藏) -->
+        <div
+          id="weather-container"
+          class="hidden flex flex-wrap justify-center gap-3"
+        >
+          <!-- 內容將由 JS 動態生成 -->
+        </div>
+
+        <!-- <div class="py-4 my-4 flex justify-evenly">
+          <button class="btn btn-primary">
+            <a href="/itinerary" class="text-2xl font-bold">行程總攬</a>
+          </button>
+          <button
+            class="btn btn-primary text-2xl text-secondary-yellow font-bold"
+          >
+            <a href="/expenses-content">費用統計</a>
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  {%endblock%}
+</div>

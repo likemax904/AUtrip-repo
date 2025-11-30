@@ -1,0 +1,125 @@
+[
+  {
+    "id": 101,
+    "day": 1,
+    "location": "桃園機場 (Taoyuan Airport)",
+    "activity": "搭機",
+    "notes": "預計下午2:30台中出發，下午5:30抵達桃園機場，並享受悠閒的晚餐，晚上11:45搭機出發🛫!!。",
+    "information": "",
+    "little_text": "登機證、護照、重要物品確認帶齊再出門。",
+    "time_range": "14:30~0:00",
+    "map_location": [
+      "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17190.067805134073!2d121.22159890696936!3d25.075898776168348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34429fc062d215d5%3A0x70a3b690a9b5b109!2z6Ie654Gj5qGD5ZyS5ZyL6Zqb5qmf5aC0!5e0!3m2!1szh-TW!2stw!4v1764257708281!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    ]
+  },
+  {
+    "id": 102,
+    "day": 2,
+    "location": "墨爾本飯店",
+    "activity": "前往飯店 ",
+    "notes": "前往飯店 (Docklands Private Collection - NewQuay) 小憩。",
+    "information": "",
+    "little_text": "下機後留意東西是否帶齊。",
+    "map_location": [
+      "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.9834941560134!2d144.9421273!3d-37.8138556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d2c6556c837%3A0x9e5abfd31950644b!2sDocklands%20Private%20Collection%20-%20NewQuay!5e0!3m2!1szh-TW!2stw!4v1764438811804!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    ]
+  },
+  {
+    "id": 103,
+    "day": 2,
+    "location": "墨爾本港區",
+    "activity": "濱海港區(Docklands)",
+    "notes": "港區漫步後享用當地美食晚餐",
+    "information": "",
+    "little_text": "",
+    "map_location": [
+      "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4457.396178545577!2d144.94024246027095!3d-37.816863690437685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d674616d46f%3A0x5045675218cfdf0!2zMzAwOOa-s-a0sue2reWkmuWIqeS6nuecgeWiqOeIvuacrOa_sea1t-a4r-WNgA!5e0!3m2!1szh-TW!2stw!4v1764472204257!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    ],
+    "food_places": [
+      {
+        "name": "港區購物中心",
+        "url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.993672228884!2d144.9406075!3d-37.8136172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d680c4857e9%3A0x16b84c910fe9519b!2sThe%20District%20Docklands!5e0!3m2!1szh-TW!2stw!4v1764494549314!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      },
+      {
+        "name": "亞洲超市",
+        "url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.9526223268804!2d144.9358591!3d-37.8145787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5d35b76be3%3A0x6891bbbece06b34b!2sAsian%20Grocery%20NewQuay!5e0!3m2!1szh-TW!2stw!4v1764494523073!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      },
+      {
+        "name": "Coles Spencer St",
+        "url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6303.8760503382255!2d144.9484568!3d-37.8149206!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4f1aaeef25%3A0x7bf7a5b1eabbd809!2sColes%20Spencer%20St!5e0!3m2!1szh-TW!2stw!4v1764494498344!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      },
+      {
+        "name": "Woolworths Victoria Harbour",
+        "url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.698810479309!2d144.9387109!3d-37.8205232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5c1bff895b%3A0x9328d3d0c37de9a0!2sWoolworths%20Victoria%20Harbour!5e0!3m2!1szh-TW!2stw!4v1764494478810!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      },
+      {
+        "name": "Woolworths The District",
+        "url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.993672228884!2d144.9406075!3d-37.8136172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d680c4857e9%3A0x16b84c910fe9519b!2sThe%20District%20Docklands!5e0!3m2!1szh-TW!2stw!4v1764494415908!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "day": 3,
+    "location": "墨爾本",
+    "activity": "早餐",
+    "notes": "Lune Croissanterie Melbourne CBD網友推薦超好吃的可頌+咖啡，只能外帶、刷卡。",
+    "map_location": [
+      "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d50433.00219970093!2d144.950215!3d-37.8120018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad643d9584cad4f%3A0x6420e780b528906c!2sLune%20Croissanterie%20Melbourne%20CBD!5e0!3m2!1szh-TW!2stw!4v1764512720933!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    ]
+  },
+  {
+    "id": 105,
+    "day": 3,
+    "location": "墨爾本聯邦廣場",
+    "activity": "聯邦廣場、Hosier lane塗鴉巷",
+    "notes": "參觀維多利亞女王市場，品嚐當地美食與咖啡。",
+    "map_location": [
+      "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.830052241699!2d144.9675118!3d-37.8174495!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b6e9fcc44f%3A0x38e74745ead60eab!2z6IGv6YKm5buj5aC0!5e0!3m2!1szh-TW!2stw!4v1764512826052!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    ],
+    "food_places": [
+      {
+        "name": "The Soup Place",
+        "url": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6303.7300753935!2d144.9573513!3d-37.8166301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b43f265acb%3A0x2420ba6ad91530aa!2sThe%20Soup%20Place!5e0!3m2!1szh-TW!2stw!4v1764513145334!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "day": 3,
+    "location": "澳網球場區",
+    "activity": "澳網四強（夜場）",
+    "notes": "澳網四強10:00後就可入場。",
+    "map_location": [
+      "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3151.7049763167715!2d144.9751897!3d-37.8203788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b9732acf25%3A0xa6dbb64068253161!2z576F5b63wrfmi4nmsoPnq7bmioDloLQ!5e0!3m2!1szh-TW!2stw!4v1764513495576!5m2!1szh-TW!2stw\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+    ]
+  },
+  {
+    "id": 107,
+    "day": 4,
+    "location": "墨爾本 (Melbourne)",
+    "activity": "城市慢活：普芬比利蒸汽火車與菲利普島企鵝歸巢",
+    "notes": "晚上在海邊等待小企鵝上岸，請注意保暖。"
+  },
+  {
+    "id": 108,
+    "day": 8,
+    "location": "開恩茲 (Cairns)",
+    "activity": "熱帶冒險：飛往開恩茲，漫步海濱大道",
+    "notes": "入住度假村，晚上逛開恩茲夜市。"
+  },
+  {
+    "id": 109,
+    "day": 9,
+    "location": "開恩茲 (Cairns)",
+    "activity": "海底總動員：大堡礁 (Great Barrier Reef) 豪華遊船",
+    "notes": "全日出海浮潛或深潛，探索絢麗的珊瑚礁。"
+  },
+  {
+    "id": 110,
+    "day": 10,
+    "location": "開恩茲 / 返程",
+    "activity": "完美句點：庫蘭達熱帶雨林纜車，搭機返家",
+    "notes": "購買最後的紀念品，前往機場。"
+  }
+]
