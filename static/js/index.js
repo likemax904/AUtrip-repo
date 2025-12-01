@@ -470,7 +470,15 @@ function renderItinerary(plans) {
                               ${plan.information ? plan.information : ""}
                             </p>
                             <div >
-                              ${plan.map_location ? plan.map_location : ""}
+                              ${
+                                plan.map_location
+                                  ? `
+                                  <div class="mt-3 map-frame aspect-video w-full rounded-xl overflow-hidden border border-gray-200">
+                                    ${plan.map_location}
+                                  </div>
+                                  `
+                                  : ""
+                              }
                             </div>
                           </div>
                           ${
