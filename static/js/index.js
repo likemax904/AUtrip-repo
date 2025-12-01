@@ -508,7 +508,7 @@ function renderItinerary(plans) {
                                 <h3 class="text-primary-blue">
                                   ${f.name}
                                 </h3>
-                                <div class="p-2">
+                                <div class="mt-3 map-frame aspect-video w-full rounded-xl overflow-hidden border border-gray-200 ">
                                   ${f.url}
                                 </div>
                               </div>
