@@ -3,6 +3,8 @@ let expensesData = [];
 const TARGET_DATE = "2026-01-28T09:00:00";
 let expensePieChart = null;
 let expenseBarChart = null;
+let itineraryAllData = null; //存API回來的全部資料
+let currentDayFilter = 1; //預設顯示D1(1/28)
 
 // --- 預設靜態資料 (Mock Data) ---
 // 用於預覽時或連線失敗時顯示
@@ -276,12 +278,21 @@ async function fetchItinerary() {
     if (!res.ok) throw new Error("連線失敗");
 
     const plans = await res.json();
-    renderItinerary(plans);
+    itineraryAllData = plans;
+    renderItineraryByDay(currentDayFilter);
+    //renderItinerary(plans);
     updateStatus(true);
   } catch (err) {
     console.warn("無法連線後端，切換至靜態預覽模式。", err);
 
-    renderItinerary(mockItinerary); // 使用靜態資料
+    // 靜態模式也要組成同樣的結構
+    itineraryAllData = {
+      itinerary_data: mockItinerary,
+      imagemap_data: imageMap,
+    };
+    renderItineraryByDay(currentDayFilter);
+
+    //renderItinerary(mockItinerary); // 使用靜態資料
     updateStatus(false);
   }
 }
@@ -385,6 +396,46 @@ function getImageKeyword(location) {
   if (location.includes("大堡礁") || location.includes("Barrier Reef"))
     return "Barrier Reef";
   return "Default";
+}
+
+function renderItineraryByDay(day) {
+  if (!itineraryAllData) return;
+
+  currentDayFilter = day;
+
+  const allPlans = itineraryAllData.itinerary_data || [];
+  const imagemap = itineraryAllData.imagemap_data || {};
+
+  const filteredPlans = allPlans.filter((p) => p.day === day);
+
+  renderItinerary({
+    itinerary_data: filteredPlans,
+    imagemap_data: imagemap,
+  });
+
+  highlightDayButton(day);
+}
+
+function highlightDayButton(day) {
+  const buttons = document.querySelectorAll('[id^="day-btn-"]');
+  buttons.forEach((btn) => {
+    btn.classList.remove(
+      "bg-primary-blue",
+      "text-white",
+      "border-primary-blue"
+    );
+    btn.classList.add("bg-white", "text-gray-700", "border-gray-300");
+  });
+
+  const activeBtn = document.getElementById(`day-btn-${day}`);
+  if (activeBtn) {
+    activeBtn.classList.remove("bg-white", "text-gray-700", "border-gray-300");
+    activeBtn.classList.add(
+      "bg-primary-blue",
+      "text-white",
+      "border-primary-blue"
+    );
+  }
 }
 
 function renderItinerary(plans) {
@@ -743,3 +794,4 @@ window.addExpense = addExpense;
 window.deleteExpense = deleteExpense;
 window.calculateStats = calculateStats;
 window.toggleDetails = toggleDetails;
+window.renderItineraryByDay = renderItineraryByDay;
