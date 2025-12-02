@@ -601,12 +601,14 @@ function renderExpenses(expenses) {
                       e.item
                     }</td>
                     <td class="px-4 py-3 text-sm text-gray-700 font-mono">$${e.cost.toFixed(
-                      2
+                      0
                     )}</td>
                     <td class="px-4 py-3 text-sm text-gray-700">
-                        <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">${
+                        ${
                           e.payer
-                        }</span>
+                            ? `<span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">${e.payer}</span>`
+                            : ""
+                        }
                     </td>
                     <td class="px-4 py-3 text-sm hidden">
                         <button onclick="deleteExpense(${
